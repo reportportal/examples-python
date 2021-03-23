@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Example using the space separated format. Taken from Robot Framework documentation:
+Documentation     Example of a sipmple test on Robot Framework, taken from official documentation:
 ...               http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#space-separated-format
 Library           OperatingSystem
 
