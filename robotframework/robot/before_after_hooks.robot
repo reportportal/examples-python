@@ -2,7 +2,8 @@
 Documentation     An example of using before and after hooks
 Suite Setup       Log suite setup
 Suite Teardown    Log suite tear down
-Test Setup
+Test Setup        Log test setup
+Test Teardown     Log test tear down
 
 *** Variables ***
 ${FIRST_MESSAGE}   My first test
