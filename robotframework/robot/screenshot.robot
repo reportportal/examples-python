@@ -9,7 +9,7 @@ Suite Setup       Run Keywords                          Download And Install    
 Suite Teardown    Close Browser
 
 *** Variables ***
-${DELAY}       1 second
+${DELAY}          1 second
 
 *** Keywords ***
 Open Page
