@@ -22,7 +22,7 @@ Get image
     [return]       ${result}
 
 *** Test Cases ***
-My Test
+Launch log test
     Launch Log        INFO               ${PASS_MESSAGE}
     Launch Log        ERROR              ${ERROR_MESSAGE}
     ${log_image}      Get image          ${PUG_IMAGE}
