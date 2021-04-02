@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  Example of launch level logs
+Documentation  Example of different log types
 Library        library/ItemLevelLog.py
 Library        OperatingSystem
 Library        String
