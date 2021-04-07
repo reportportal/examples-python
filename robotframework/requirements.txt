@@ -1,4 +1,4 @@
-robotframework<=3.2.2
+robotframework
 robotframework-reportportal
 robotframework-seleniumlibrary
 webdrivermanager
