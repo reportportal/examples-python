@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Example using critiacl and non-critical tags. To run use:
+Documentation    Example using critical and non-critical tags. To run use:
 ...              robot --noncritical not_ready robot/critical.robot
 
 *** Test Cases ***
