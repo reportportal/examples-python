@@ -11,14 +11,11 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-from robotframework_reportportal import service
+from robotframework_reportportal import listener, model
 
 
 def launch_log(level: str, message: str, attachment: dict = None):
-    rq = {
-        "time": service.timestamp(),
-        "message": message,
-        "level": service.RobotService.log_level_mapping[level],
-        "attachment": attachment,
-    }
-    service.RobotService.rp.log(**rq)
+    rq = model.LogMessage(message)
+    rq.level = level
+    rq.attachment = attachment
+    listener.current.service.log(rq)
