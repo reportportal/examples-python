@@ -2,7 +2,7 @@
 Documentation     A simple failure test which takes and logs screenshot
 Library           SeleniumLibrary
 Library           webdrivermanager.chrome.ChromeDriverManager
-Library           library/ItemLevelLog.py
+Library           library/Log.py
 Library           OperatingSystem
 Suite Setup       Run Keywords                          Download And Install    AND
 ...               Register Keyword To Run On Failure    Post screenshot

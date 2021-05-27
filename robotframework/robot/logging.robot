@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  Example of different log types
-Library        library/ItemLevelLog.py
+Library        library/Log.py
 Library        OperatingSystem
 Library        String
 Library        mimetypes.MimeTypes

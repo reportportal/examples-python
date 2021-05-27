@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  Example of launch level logs
-Library        library/LaunchLevelLog.py
+Library        library/Log.py
 Library        OperatingSystem
 Library        String
 
