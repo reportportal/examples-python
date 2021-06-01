@@ -1,6 +1,13 @@
+*** Settings ***
+Library        DataDriver
+Test Template  Login with invalid credentials should fail
+
 *** Variables ***
 ${VALID USER}      User
 ${VALID PASSWORD}  Password
+
+*** Test Cases ***
+Login with user '${username}' and password '${password}'  Default  UserData
 
 *** Keywords ***
 Login with invalid credentials should fail
