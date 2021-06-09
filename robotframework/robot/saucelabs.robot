@@ -1,6 +1,6 @@
 *** Settings ***
-Documentation   The example demonstrates saucelabs integration. Set
-...             'SAUCELABS_USER' and 'SAUCELABS_TOKEN' environment variables
+Documentation   The example demonstrates saucelabs integration. Set \
+...             'SAUCELABS_USER' and 'SAUCELABS_TOKEN' environment variables \
 ...             with yours.
 Library         String
 Library         OperatingSystem
