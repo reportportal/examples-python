@@ -8,8 +8,10 @@ Library         SeleniumLibrary
 Suite Teardown  Close Browser
 
 *** Variables ***
-${DELAY}            1 second
-${SAUCELABS_URL}    https://ondemand.eu-central-1.saucelabs.com:443/wd/hub
+${DELAY}               1 second
+${SAUCELABS_URL}       https://ondemand.eu-central-1.saucelabs.com:443/wd/hub
+${SAUCELABS_PLATFORM}  Windows 10
+
 
 *** Keywords ***
 Open Page
@@ -21,7 +23,7 @@ Open Page
     ${capabilities}          Create Dictionary
     ...                      browserName        ${browser}
     ...                      browserVersion     latest
-    ...                      platformName       Windows 10
+    ...                      platformName       ${SAUCELABS_PLATFORM}
     ...                      sauce:options      ${sauce:options}
     ${sl_host}               Fetch From Right   ${SAUCELABS_URL}          //
     ${sl_protocol}           Fetch From Left    ${SAUCELABS_URL}          //
