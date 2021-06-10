@@ -1,0 +1,6 @@
+rp_uuid: your_rp_access_token
+rp_endpoint: http://localhost:8080
+rp_launch: "Robot Framework"
+rp_project: default_personal
+rp_launch_attributes: "tag key1:value1 key2:value2"
+rp_launch_doc: "My test launch"

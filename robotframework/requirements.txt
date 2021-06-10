@@ -3,3 +3,4 @@ robotframework-datadriver
 robotframework-reportportal
 robotframework-seleniumlibrary
 webdrivermanager
+PyYAML
