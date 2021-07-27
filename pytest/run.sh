@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pytest --reportportal tests
+pytest --reportportal -m "not custom" tests
