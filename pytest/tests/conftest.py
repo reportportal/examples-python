@@ -6,7 +6,7 @@ import pytest
 from pytest_reportportal import RPLogger, RPLogHandler
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope='session')
 def rp_logger(request):
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
@@ -25,3 +25,9 @@ def rp_logger(request):
     # Set INFO level for Report Portal handler.
     rp_handler.setLevel(logging.INFO)
     return logger
+
+
+@pytest.fixture(autouse=True)
+def skip_by_mark(request):
+    if request.node.get_closest_marker('fixture_skip'):
+        pytest.skip('skip by fixture')
