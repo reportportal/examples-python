@@ -19,3 +19,7 @@ def test_custom_mark_skip_command_line():
 @pytest.mark.fixture_skip
 def test_custom_mark_skip_fixture():
     assert True is False
+
+
+def test_inner_skip_test():
+    pytest.skip("Skip from test insides")
