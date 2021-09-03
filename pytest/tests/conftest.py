@@ -31,3 +31,18 @@ def rp_logger(request):
 def skip_by_mark(request):
     if request.node.get_closest_marker('fixture_skip'):
         pytest.skip('skip by fixture')
+
+
+@pytest.fixture(scope='session')
+def rp_launch_id(request):
+    return request.config.py_test_service.rp.launch_id
+
+
+@pytest.fixture(scope='session')
+def rp_endpoint(request):
+    return request.config.py_test_service.rp.endpoint
+
+
+@pytest.fixture(scope='session')
+def rp_project(request):
+    return request.config.py_test_service.rp.project
