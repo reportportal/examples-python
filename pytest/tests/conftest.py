@@ -35,14 +35,17 @@ def skip_by_mark(request):
 
 @pytest.fixture(scope='session')
 def rp_launch_id(request):
-    return request.config.py_test_service.rp.launch_id
+    if hasattr(request.config, "py_test_service"):
+        return request.config.py_test_service.rp.launch_id
 
 
 @pytest.fixture(scope='session')
 def rp_endpoint(request):
-    return request.config.py_test_service.rp.endpoint
+    if hasattr(request.config, "py_test_service"):
+        return request.config.py_test_service.rp.endpoint
 
 
 @pytest.fixture(scope='session')
 def rp_project(request):
-    return request.config.py_test_service.rp.project
+    if hasattr(request.config, "py_test_service"):
+        return request.config.py_test_service.rp.project
