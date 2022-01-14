@@ -20,3 +20,4 @@ logger = logging.getLogger(__name__)
 
 def test_report_portal_logging():
     logger.info("Standard logger logs to Report Portal")
+    assert True

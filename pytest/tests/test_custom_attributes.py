@@ -10,4 +10,4 @@ def test_custom_attributes_report(rp_logger):
     ReportPortal on test's item as different attributes
     """
     rp_logger.info("A test with multiple custom attributes")
-    assert True is True
+    assert True
