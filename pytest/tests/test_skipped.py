@@ -1,8 +1,12 @@
 import pytest
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
-def test_pass_to_show_in_report(rp_logger):
-    rp_logger.info("Just a passed test")
+def test_pass_to_show_in_report():
+    logging.info("Just a passed test")
     assert True
 
 
