@@ -6,17 +6,16 @@ import pytest
 from pytest_reportportal import RPLogger, RPLogHandler
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='session')
 def rp_logger(request):
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
     # Create handler for Report Portal if the service has been
     # configured and started.
-    test_item = request.node
-    if hasattr(test_item.config, 'py_test_service'):
+    if hasattr(request.node.config, 'py_test_service'):
         # Import Report Portal logger and handler to the test module.
         logging.setLoggerClass(RPLogger)
-        rp_handler = RPLogHandler(test_item, test_item.config.py_test_service)
+        rp_handler = RPLogHandler(request.node.config.py_test_service)
         # Add additional handlers if it is necessary
         console_handler = logging.StreamHandler(sys.stdout)
         console_handler.setLevel(logging.INFO)
