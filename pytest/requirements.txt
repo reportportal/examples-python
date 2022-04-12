@@ -1,2 +1,2 @@
-pytest-reportportal
+pytest-reportportal>=5.1.0
 pytest>=3.8.0
