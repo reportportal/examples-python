@@ -40,5 +40,3 @@ def mute_reportportal_logs():
     service_logger.setLevel(100)
     client_logger = logging.getLogger("reportportal_client.service")
     client_logger.setLevel(100)
-    urllib_logger = logging.getLogger("urllib3")
-    urllib_logger.setLevel(100)
