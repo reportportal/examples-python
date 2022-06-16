@@ -12,6 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 import os
+import logging
 
 from robotframework_reportportal import logger
 
@@ -30,3 +31,14 @@ def item_log(level: str, message: str, attachment: dict = None):
 
 def launch_log(level: str, message: str, attachment: dict = None):
     logger.write(message, level, attachment=attachment, launch_log=True)
+
+
+def mute_reportportal_logs():
+    listener_logger = logging.getLogger("robotframework_reportportal.listener")
+    listener_logger.setLevel(100)
+    service_logger = logging.getLogger("robotframework_reportportal.service")
+    service_logger.setLevel(100)
+    client_logger = logging.getLogger("reportportal_client.service")
+    client_logger.setLevel(100)
+    urllib_logger = logging.getLogger("urllib3")
+    urllib_logger.setLevel(100)
