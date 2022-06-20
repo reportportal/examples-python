@@ -6,7 +6,8 @@ Library           webdrivermanager.chrome.ChromeDriverManager
 Library           library/Log.py
 Library           OperatingSystem
 Suite Setup       Run Keywords                          Download And Install    AND
-...               Register Keyword To Run On Failure    Post screenshot
+...               Register Keyword To Run On Failure    Post screenshot         AND
+...               Set Screenshot Directory              .
 Suite Teardown    Close Browser
 
 *** Variables ***
