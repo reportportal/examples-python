@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Replace runner variables with your variables
-robot --noncritical not_ready \
+robot --skiponfailure not_ready \
       --listener robotframework_reportportal.listener \
       --variable RP_UUID:"your_rp_access_token" \
       --variable RP_ENDPOINT:"http://localhost:8080" \
