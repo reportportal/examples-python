@@ -1,5 +1,5 @@
-robotframework
-robotframework-datadriver
+robotframework==6.0.2
+robotframework-datadriver==1.7.0
 robotframework-reportportal==5.3.1
 robotframework-seleniumlibrary
 webdrivermanager
