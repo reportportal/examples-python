@@ -1,6 +1,6 @@
 robotframework
 robotframework-datadriver
-robotframework-reportportal
+robotframework-reportportal==5.3.1
 robotframework-seleniumlibrary
 webdrivermanager
 PyYAML
