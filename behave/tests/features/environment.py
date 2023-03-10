@@ -1,15 +1,28 @@
+import logging
+
+from reportportal_client.logs import RPLogger, RPLogHandler
+
 from behave_reportportal.behave_agent import BehaveAgent, create_rp_service
 from behave_reportportal.config import read_config
 
 
 def before_all(context):
     cfg = read_config(context)
-    context.rp_agent = BehaveAgent(cfg, create_rp_service(cfg))
+    context.rp_client = create_rp_service(cfg)
+    context.rp_client.start()
+    context.rp_agent = BehaveAgent(cfg, context.rp_client)
     context.rp_agent.start_launch(context)
+    logging.setLoggerClass(RPLogger)
+    log = logging.getLogger(__name__)
+    log.setLevel("DEBUG")
+    rph = RPLogHandler(rp_client=context.rp_client)
+    log.addHandler(rph)
+    context.log = log
 
 
 def after_all(context):
     context.rp_agent.finish_launch(context)
+    context.rp_client.terminate()
 
 
 def before_feature(context, feature):
