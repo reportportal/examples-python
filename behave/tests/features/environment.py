@@ -1,6 +1,6 @@
 import logging
 
-from reportportal_client.logs import RPLogger, RPLogHandler
+from reportportal_client import RPLogger, RPLogHandler
 
 from behave_reportportal.behave_agent import BehaveAgent, create_rp_service
 from behave_reportportal.config import read_config
