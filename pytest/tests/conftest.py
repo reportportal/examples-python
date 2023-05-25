@@ -54,17 +54,3 @@ def rp_endpoint(request):
 def rp_project(request):
     if hasattr(request.config, "py_test_service"):
         return request.config.py_test_service.rp.project
-
-
-@pytest.fixture(scope='function')
-def rp_thread_logger(request):
-    logger = logging.getLogger("test." + request.node.name)
-    handler = RPLogHandler(
-        level=logging.DEBUG,
-        filter_client_logs=True,
-        endpoint=request.config._reporter_config.rp_endpoint,
-        ignored_record_names=('reportportal_client',
-                              'pytest_reportportal'),
-        rp_client=reportportal_client.current())
-    logger.addHandler(handler)
-    return logger
