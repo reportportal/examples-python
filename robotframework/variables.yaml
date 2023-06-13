@@ -1,4 +1,4 @@
-rp_uuid: your_rp_access_token
+rp_api_key: your_rp_access_token
 rp_endpoint: http://localhost:8080
 rp_launch: "Robot Framework"
 rp_project: default_personal
