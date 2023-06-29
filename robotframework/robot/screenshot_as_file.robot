@@ -1,4 +1,4 @@
-# This method is recommended way of storing sxreenshots
+# This method is recommended way of storing screenshots
 *** Settings ***
 Documentation     A simple failure test which takes and logs screenshot
 Library           SeleniumLibrary
