@@ -38,7 +38,7 @@ class ThreadLogger(threading.Thread):
         while self.stop_event.is_set() is False:
             time.sleep(.5)
             self.logger.info(
-                "This is a log from a thread: " + self.logger.name)
+                f'This is a log from a thread: {self.logger.name}; time: {time.time()}')
 
 
 def create_threaded_logger(name: str):
@@ -63,6 +63,6 @@ def thread2():
 def test_threaded_logging(thread1: ThreadLogger, thread2: ThreadLogger):
     """This test logs from multiple threads."""
     logging.info("This is a log from the main thread")
-    time.sleep(1)
+    time.sleep(1.1)
     thread1.stop_event.set()
     thread2.stop_event.set()
