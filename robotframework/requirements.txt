@@ -1,6 +1,6 @@
-robotframework==6.0.2
-robotframework-datadriver==1.7.0
+robotframework==6.1.1
+robotframework-datadriver==1.9.0
 robotframework-reportportal==5.4.0
-robotframework-seleniumlibrary
-webdrivermanager
+robotframework-seleniumlibrary==6.1.3
+selenium>=4.10.0
 PyYAML

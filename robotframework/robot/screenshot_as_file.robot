@@ -2,12 +2,10 @@
 *** Settings ***
 Documentation     A simple failure test which takes and logs screenshot
 Library           SeleniumLibrary
-Library           webdrivermanager.chrome.ChromeDriverManager
 Library           library/Log.py
 Library           OperatingSystem
-Suite Setup       Run Keywords                          Download And Install    AND
-...               Register Keyword To Run On Failure    Post screenshot         AND
-...               Set Screenshot Directory              .
+Suite Setup       Run Keywords              Register Keyword To Run On Failure  Post screenshot  AND
+...               Set Screenshot Directory  .
 Suite Teardown    Close Browser
 
 *** Variables ***
