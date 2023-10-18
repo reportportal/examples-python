@@ -9,7 +9,6 @@ from behave_reportportal.config import read_config
 def before_all(context):
     cfg = read_config(context)
     context.rp_client = create_rp_service(cfg)
-    context.rp_client.start()
     context.rp_agent = BehaveAgent(cfg, context.rp_client)
     context.rp_agent.start_launch(context)
     logging.setLoggerClass(RPLogger)
