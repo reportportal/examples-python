@@ -41,7 +41,7 @@ def skip_by_mark(request):
 @pytest.fixture(scope='session')
 def rp_launch_id(request):
     if hasattr(request.config, "py_test_service"):
-        return request.config.py_test_service.rp.launch_id
+        return request.config.py_test_service.rp.launch_uuid
 
 
 @pytest.fixture(scope='session')
