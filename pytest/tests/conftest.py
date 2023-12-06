@@ -15,8 +15,7 @@
 import logging
 
 import pytest
-import reportportal_client
-from reportportal_client import RPLogger, RPLogHandler
+from reportportal_client import RPLogger
 
 
 # Uncomment the following lines to get full HTTP logging in console
