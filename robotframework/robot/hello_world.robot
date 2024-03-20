@@ -2,6 +2,7 @@
 Documentation     Example of a sipmple test on Robot Framework, taken from official documentation:
 ...               http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#space-separated-format
 Library           OperatingSystem
+Metadata          Author    John Doe
 
 *** Variables ***
 ${MESSAGE}        Hello, world!

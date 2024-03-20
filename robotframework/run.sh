@@ -2,6 +2,7 @@
 
 # Replace runner variables with your variables
 robot --skiponfailure not_ready \
+      --metadata Scope:smoke \
       --listener robotframework_reportportal.listener \
       --variable RP_API_KEY:"your_rp_api_key" \
       --variable RP_ENDPOINT:"http://localhost:8080" \
