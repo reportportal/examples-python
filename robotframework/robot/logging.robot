@@ -19,7 +19,7 @@ Get file
     ...            mime               ${type}[0]
     ...            name               ${name}
     ...            data               ${data}
-    [return]       ${result}
+    RETURN         ${result}
 
 *** Test Cases ***
 Test logging

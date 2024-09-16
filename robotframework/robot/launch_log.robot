@@ -19,7 +19,7 @@ Get image
     ...            mime               image/jpeg
     ...            name               ${name}
     ...            data               ${data}
-    [return]       ${result}
+    RETURN         ${result}
 
 *** Test Cases ***
 Launch log test
