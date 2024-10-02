@@ -39,7 +39,7 @@ RP_LAUNCH_UUID=$(curl --location --request POST "${RP_ENDPOINT}/api/v1/${RP_PROJ
   "startTime": "'"${START_TIME}"'"
 }' | grep -o '"id": *"[^"]*"' | sed 's/"id": *"\([^"]*\)"/\1/')
 
-# Replace runner variables with your variables
+# Run tests with Pabot
 pabot --skiponfailure not_ready \
       --metadata Scope:smoke \
       --listener robotframework_reportportal.listener \
