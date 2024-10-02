@@ -4,6 +4,7 @@ Library        library/Log.py
 
 *** Test Cases ***
 Test tag set
+    [Tags]  static_tag
     Item Log  INFO               A test with a tag set in runtime
     Set Tags  dynamic_tag
 Test no tag
