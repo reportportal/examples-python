@@ -1,6 +1,6 @@
 robotframework==7.1
 robotframework-datadriver==1.11.2
-robotframework-reportportal~=5.5.6
+robotframework-reportportal~=5.5.7
 robotframework-seleniumlibrary==6.6.1
 robotframework-pabot==2.18.0
 selenium>=4.25.0

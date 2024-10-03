@@ -33,12 +33,12 @@ def case_id(test_case_id_pattern: Optional[str]) -> None:
     built_in = BuiltIn()
     if not test_case_id_pattern:
         return
-    suite_metadata = built_in.get_variable_value('${suitemetadata}')
-    scope = None
-    for key in suite_metadata:
-        if key.lower() == 'scope':
-            scope = suite_metadata[key]
+    suite_metadata = str(built_in.get_variable_value('${rplaunchattributes}')).split()
+    env = None
+    for value in suite_metadata:
+        if value.strip().lower().startswith('env:'):
+            env = value.strip().split(':', maxsplit=1)[1]
             break
-    if not scope:
+    if not env:
         return
-    built_in.set_tags('test_case_id:' + test_case_id_pattern.format(scope_var=scope))
+    built_in.set_tags('test_case_id:' + test_case_id_pattern.format(env_var=env))
