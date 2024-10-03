@@ -28,8 +28,6 @@ from typing import Optional
 
 from robot.libraries.BuiltIn import BuiltIn
 
-TEST_CASE_ID_SIGN = 'test_case_id:'
-
 
 def case_id(test_case_id_pattern: Optional[str]) -> None:
     built_in = BuiltIn()
