@@ -2,7 +2,6 @@
 *** Settings ***
 Documentation     A simple failure test which takes and logs screenshot
 Library           SeleniumLibrary
-Library           OperatingSystem
 Suite Setup       Run Keywords              Register Keyword To Run On Failure  Capture Page Screenshot  AND
 ...               Set Screenshot Directory  .
 Suite Teardown    Close Browser
