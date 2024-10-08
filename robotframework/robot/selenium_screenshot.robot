@@ -1,10 +1,8 @@
-# This method is recommended way of storing screenshots
+# This example is recommended way of capturing Selenium screenshots
 *** Settings ***
 Documentation     A simple failure test which takes and logs screenshot
 Library           SeleniumLibrary
-Library           library/Log.py
-Library           OperatingSystem
-Suite Setup       Run Keywords              Register Keyword To Run On Failure  Post screenshot  AND
+Suite Setup       Run Keywords              Register Keyword To Run On Failure  Capture Page Screenshot  AND
 ...               Set Screenshot Directory  .
 Suite Teardown    Close Browser
 
@@ -17,9 +15,6 @@ Open Page
     Open Browser               ${url}                     ${browser}
     Maximize Browser Window
     Set Selenium Speed         ${DELAY}
-Post screenshot
-    ${screenshot_file}         Capture Page Screenshot
-    Screenshot Log             ERROR                      Screenshot    ${screenshot_file}
 
 *** Test Cases ***
 Screenshot test
