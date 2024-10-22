@@ -24,6 +24,7 @@ START_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 # Extract the launch ID using curl, grep, and sed
 RP_LAUNCH_UUID=$(curl --location --request POST "${RP_ENDPOINT}/api/v1/${RP_PROJECT}/launch" \
+--fail \
 --header "Authorization: Bearer ${RP_API_KEY}" \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -38,6 +39,12 @@ RP_LAUNCH_UUID=$(curl --location --request POST "${RP_ENDPOINT}/api/v1/${RP_PROJ
   "name": "'"${RP_LAUNCH}"'",
   "startTime": "'"${START_TIME}"'"
 }' | grep -o '"id": *"[^"]*"' | sed 's/"id": *"\([^"]*\)"/\1/')
+
+# Check if the curl command failed
+if [ -z "${RP_LAUNCH_UUID}" ]; then
+  echo "Failed to create launch on ReportPortal"
+  exit 1
+fi
 
 # Run tests with Pabot
 pabot --skiponfailure not_ready \
