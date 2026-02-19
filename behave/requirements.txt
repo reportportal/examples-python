@@ -1,2 +1,2 @@
 behave==1.3.3
-behave-reportportal==5.0.2
+behave-reportportal==5.1.0

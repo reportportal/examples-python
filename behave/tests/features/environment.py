@@ -13,7 +13,7 @@ def before_all(context):
     context.rp_agent.start_launch(context)
     logging.setLoggerClass(RPLogger)
     log = logging.getLogger(__name__)
-    log.setLevel("DEBUG")
+    log.setLevel(logging.INFO)
     rph = RPLogHandler(rp_client=rp_client)
     log.addHandler(rph)
     context.log = log
